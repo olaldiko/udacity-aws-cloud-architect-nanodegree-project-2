@@ -1,26 +1,27 @@
 Estimate summary,,,,,,,,,
 Upfront cost,Monthly cost,Total 12 months cost,Currency,,,,,,
-530.63,493.42,6451.76,USD,,,,,,
+768.69,453.13,6206.25,USD,,,,,,
 ,,* Includes upfront cost,,,,,,,
 ,,,,,,,,,
 ,,,,,,,,,
 Detailed Estimate,,,,,,,,,
 Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
+Initial estimate,US East (N. Virginia),VPC,VPN Connection,0,36.5,438,USD,,"Working days per month (22), Number of Site-to-Site VPN Connections (1)"
 Initial estimate,US East (N. Virginia),VPC,Network Address Translation (NAT) Gateway,0,35.1,421.2,USD,,Number of NAT Gateways (1)
-Initial estimate,US East (N. Virginia),Load balancer,Application Load Balancer,0,67.9,814.8,USD,,Number of Application Load Balancers (1)
+Initial estimate,US East (N. Virginia),Load balancer,Application Load Balancer,0,67.89,814.68,USD,,Number of Application Load Balancers (2)
 Initial estimate,US East (N. Virginia),S3 Storage,S3 Standard,1.70667,137.5,1651.71,USD,,"S3 Standard storage (1000 GB per month), S3 Standard Average Object Size (3 MB), PUT, COPY, POST, LIST requests to S3 Standard (1500000), GET, SELECT, and all other requests from S3 Standard (5000000), Data returned by S3 Select (150000 GB per month)"
 Initial estimate,US East (N. Virginia),S3 Storage,S3 Standard - Infrequent Access,0,14,168,USD,,"S3 Standard-IA storage (1000 GB per month), PUT, COPY, POST, LIST requests to S3 Standard-IA (50000), Data retrievals (100 GB per month)"
 Initial estimate,US East (N. Virginia),S3 Storage,Data Transfer,0,0,0,USD,,
-Initial estimate,US East (N. Virginia),Cloudfront cache,Amazon CloudFront,0,105.84,1270.08,USD,,"Data transfer out to internet (300 GB per month), Data transfer out to origin (75 GB per month), Number of requests (HTTPS) (30 per second)"
-Initial estimate,US East (N. Virginia),Web servers,Amazon EC2 ,49.932,26.245753,364.88,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Daily, (Workload days: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Baseline: 1, Peak: 10, Duration of peak: 8 Hr 30 Min)), Advance EC2 instance (t4g.micro), Pricing strategy ( 1 Year  All upfront), Enable monitoring (disabled), EBS Storage amount (20 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
-Initial estimate,US East (N. Virginia),App servers,Amazon EC2 ,98.988,45.791505,648.49,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Daily, (Workload days: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Baseline: 1, Peak: 10, Duration of peak: 8 Hr 30 Min)), Advance EC2 instance (t4g.small), Pricing strategy ( 1 Year  All upfront), Enable monitoring (disabled), EBS Storage amount (20 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
-Initial estimate > DB,US East (N. Virginia),Master,Amazon RDS for MySQL,190,33.4,590.8,USD,,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (100 GB), Quantity (1), Instance type (db.t4g.small), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Single-AZ), Pricing strategy (Reserved 1yr All Upfront)"
-Initial estimate > DB,US East (N. Virginia),RDS Replica,Amazon RDS for MySQL,190,27.65,521.8,USD,,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (50 GB), Quantity (1), Instance type (db.t4g.small), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Single-AZ), Pricing strategy (Reserved 1yr All Upfront)"
+Initial estimate,US East (N. Virginia),Cloudfront cache,Amazon CloudFront,0,88.54,1062.48,USD,,"Data transfer out to internet (100 GB per month), Data transfer out to origin (60 GB per month), Number of requests (HTTPS) (30 per second)"
+Initial estimate,US East (N. Virginia),Web servers,Amazon EC2 ,98.988,31.051003,471.6,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Daily, (Workload days: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Baseline: 1, Peak: 7, Duration of peak: 8 Hr 30 Min)), Advance EC2 instance (t4g.small), Pricing strategy ( 1 Year  All upfront), Enable monitoring (disabled), EBS Storage amount (20 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+Initial estimate,US East (N. Virginia),App servers,Amazon EC2 ,98.988,31.051003,471.6,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Daily, (Workload days: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Baseline: 1, Peak: 7, Duration of peak: 8 Hr 30 Min)), Advance EC2 instance (t4g.small), Pricing strategy ( 1 Year  All upfront), Enable monitoring (disabled), EBS Storage amount (20 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+Initial estimate > DB,US East (N. Virginia),Master,Amazon RDS for MySQL,379,5.75,448,USD,,"Storage for each RDS instance (General Purpose SSD (gp3)), Storage amount (50 GB), Quantity (1), Instance type (db.t4g.medium), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Single-AZ), Pricing strategy (Reserved 1yr All Upfront)"
+Initial estimate > DB,US East (N. Virginia),Read Replica,Amazon RDS for MySQL,190,5.75,259,USD,,"Storage for each RDS instance (General Purpose SSD (gp3)), Storage amount (50 GB), Quantity (1), Instance type (db.t4g.small), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Single-AZ), Pricing strategy (Reserved 1yr All Upfront)"
 ,,,,,,,,,
 ,,,,,,,,,
 ,,,,,,,,,
 Acknowledgement,,,,,,,,,
 "* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,,
 ,,,,,,,,,
-Reduced cost explanation,,,,,,,,,
-"I reduced the instance sizes of Web Servers, App Servers and DB servers to cope with the new reduced budget. As the responses will be slower, I reduced the data transfer estimatons for VPC, Load balancer and cloudfront calculations",,,,,,,,,
+Changes,,,,,,,,,
+"Reduced instance size to fit the new budget, changed the maximum size of the ASG to have less instances. Reduced the DB server size. Reduced traffic expectations according to the reduced performance and higher response times",,,,,,,,,

@@ -1,11 +1,12 @@
 Estimate summary,,,,,,,,,
 Upfront cost,Monthly cost,Total 12 months cost,Currency,,,,,,
-3827.61,1318.97,19655.25,USD,,,,,,
+6859.61,1010.27,18982.85,USD,,,,,,
 ,,* Includes upfront cost,,,,,,,
 ,,,,,,,,,
 ,,,,,,,,,
 Detailed Estimate,,,,,,,,,
 Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
+Initial estimate,US East (N. Virginia),VPC,VPN Connection,0,36.5,438,USD,,"Working days per month (22), Number of Site-to-Site VPN Connections (1)"
 Initial estimate,US East (N. Virginia),VPC,Network Address Translation (NAT) Gateway,0,35.1,421.2,USD,,Number of NAT Gateways (1)
 Initial estimate,US East (N. Virginia),Load balancer,Application Load Balancer,0,102.93,1235.16,USD,,Number of Application Load Balancers (2)
 Initial estimate,US East (N. Virginia),S3 Storage,S3 Standard,1.70667,137.5,1651.71,USD,,"S3 Standard storage (1000 GB per month), S3 Standard Average Object Size (3 MB), PUT, COPY, POST, LIST requests to S3 Standard (1500000), GET, SELECT, and all other requests from S3 Standard (5000000), Data returned by S3 Select (150000 GB per month)"
@@ -14,7 +15,7 @@ Initial estimate,US East (N. Virginia),S3 Storage,Data Transfer,0,0,0,USD,,
 Initial estimate,US East (N. Virginia),Cloudfront cache,Amazon CloudFront,0,159.5,1914,USD,,"Data transfer out to internet (300 GB per month), Data transfer out to origin (130 GB per month), Number of requests (HTTPS) (50 per second)"
 Initial estimate,US East (N. Virginia),Web servers,Amazon EC2 ,395.952,163.06602,2352.74,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Daily, (Workload days: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Baseline: 1, Peak: 10, Duration of peak: 8 Hr 30 Min)), Advance EC2 instance (t4g.large), Pricing strategy ( 1 Year  All upfront), Enable monitoring (disabled), EBS Storage amount (20 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
 Initial estimate,US East (N. Virginia),App servers,Amazon EC2 ,395.952,163.06602,2352.74,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Daily, (Workload days: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Baseline: 1, Peak: 10, Duration of peak: 8 Hr 30 Min)), Advance EC2 instance (t4g.large), Pricing strategy ( 1 Year  All upfront), Enable monitoring (disabled), EBS Storage amount (20 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
-Initial estimate > DB,US East (N. Virginia),Master,Amazon RDS for MySQL,3034,543.8,9559.6,USD,,"Storage for each RDS instance (Provisioned IOPS SSD (io1)), Storage amount (200 GB), Provisioning IOPS (1000), Quantity (2), Instance type (db.t4g.large), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Multi-AZ), Pricing strategy (Reserved 1yr All Upfront)"
+Initial estimate > DB,US East (N. Virginia),Master,Amazon RDS for MySQL,6066,198.6,8449.2,USD,,"Storage for each RDS instance (General Purpose SSD (gp3)), Storage amount (200 GB), Quantity (2), Instance type (db.t4g.xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Multi-AZ), Pricing strategy (Reserved 1yr All Upfront), Additional backup storage (200 GB)"
 ,,,,,,,,,
 ,,,,,,,,,
 ,,,,,,,,,
@@ -22,4 +23,4 @@ Acknowledgement,,,,,,,,,
 "* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,,
 ,,,,,,,,,
 Changes,,,,,,,,,
-I increased the number of DB instances and moved it to be a Multi-AZ cluster. Upscaled the size of the web and app server instances. Updated traffic expectations according to the increased performance,,,,,,,,,
+"I increased the number of DB instances and moved it to be a Multi-AZ cluster, added backup storage to it. Upscaled the size of the web and app server instances. Updated traffic expectations according to the increased performance. ",,,,,,,,,
