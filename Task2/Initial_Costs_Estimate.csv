@@ -1,0 +1,23 @@
+Estimate summary,,,,,,,,,
+Upfront cost,Monthly cost,Total 12 months cost,Currency,,,,,,
+1345.67,684.57,9560.57,USD,,,,,,
+,,* Includes upfront cost,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+Detailed Estimate,,,,,,,,,
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
+Initial estimate,US East (N. Virginia),VPC,Network Address Translation (NAT) Gateway,0,35.1,421.2,USD,,Number of NAT Gateways (1)
+Initial estimate,US East (N. Virginia),Load balancer,Application Load Balancer,0,91.26,1095.12,USD,,Number of Application Load Balancers (1)
+Initial estimate,US East (N. Virginia),S3 Storage,S3 Standard,1.70667,137.5,1651.71,USD,,"S3 Standard storage (1000 GB per month), S3 Standard Average Object Size (3 MB), PUT, COPY, POST, LIST requests to S3 Standard (1500000), GET, SELECT, and all other requests from S3 Standard (5000000), Data returned by S3 Select (150000 GB per month)"
+Initial estimate,US East (N. Virginia),S3 Storage,S3 Standard - Infrequent Access,0,14,168,USD,,"S3 Standard-IA storage (1000 GB per month), PUT, COPY, POST, LIST requests to S3 Standard-IA (50000), Data retrievals (100 GB per month)"
+Initial estimate,US East (N. Virginia),S3 Storage,Data Transfer,0,0,0,USD,,
+Initial estimate,US East (N. Virginia),Cloudfront cache,Amazon CloudFront,0,175.9,2110.8,USD,,"Data transfer out to internet (500 GB per month), Data transfer out to origin (100 GB per month), Number of requests (HTTPS) (50 per second)"
+Initial estimate,US East (N. Virginia),Web servers,Amazon EC2 ,197.976,84.88301,1216.57,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Daily, (Workload days: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Baseline: 1, Peak: 10, Duration of peak: 8 Hr 30 Min)), Advance EC2 instance (t4g.medium), Pricing strategy ( 1 Year  All upfront), Enable monitoring (disabled), EBS Storage amount (20 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+Initial estimate,US East (N. Virginia),App servers,Amazon EC2 ,197.976,84.88301,1216.57,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Daily, (Workload days: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Baseline: 1, Peak: 10, Duration of peak: 8 Hr 30 Min)), Advance EC2 instance (t4g.medium), Pricing strategy ( 1 Year  All upfront), Enable monitoring (disabled), EBS Storage amount (20 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+Initial estimate > DB,US East (N. Virginia),Master,Amazon RDS for MySQL,758,33.4,1158.8,USD,,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (100 GB), Quantity (1), Instance type (db.t4g.large), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Single-AZ), Pricing strategy (Reserved 1yr All Upfront)"
+Initial estimate > DB,US East (N. Virginia),RDS Replica,Amazon RDS for MySQL,190,27.65,521.8,USD,,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (50 GB), Quantity (1), Instance type (db.t4g.small), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Single-AZ), Pricing strategy (Reserved 1yr All Upfront)"
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+Acknowledgement,,,,,,,,,
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,,
