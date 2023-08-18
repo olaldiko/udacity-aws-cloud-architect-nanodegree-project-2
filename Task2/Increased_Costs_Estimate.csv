@@ -1,6 +1,6 @@
 Estimate summary,,,,,,,,,
 Upfront cost,Monthly cost,Total 12 months cost,Currency,,,,,,
-6859.61,1010.27,18982.85,USD,,,,,,
+6859.61,1069.26,19690.75,USD,,,,,,
 ,,* Includes upfront cost,,,,,,,
 ,,,,,,,,,
 ,,,,,,,,,
@@ -15,7 +15,7 @@ Initial estimate,US East (N. Virginia),S3 Storage,Data Transfer,0,0,0,USD,,
 Initial estimate,US East (N. Virginia),Cloudfront cache,Amazon CloudFront,0,159.5,1914,USD,,"Data transfer out to internet (300 GB per month), Data transfer out to origin (130 GB per month), Number of requests (HTTPS) (50 per second)"
 Initial estimate,US East (N. Virginia),Web servers,Amazon EC2 ,395.952,163.06602,2352.74,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Daily, (Workload days: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Baseline: 1, Peak: 10, Duration of peak: 8 Hr 30 Min)), Advance EC2 instance (t4g.large), Pricing strategy ( 1 Year  All upfront), Enable monitoring (disabled), EBS Storage amount (20 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
 Initial estimate,US East (N. Virginia),App servers,Amazon EC2 ,395.952,163.06602,2352.74,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Daily, (Workload days: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Baseline: 1, Peak: 10, Duration of peak: 8 Hr 30 Min)), Advance EC2 instance (t4g.large), Pricing strategy ( 1 Year  All upfront), Enable monitoring (disabled), EBS Storage amount (20 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
-Initial estimate > DB,US East (N. Virginia),Master,Amazon RDS for MySQL,6066,198.6,8449.2,USD,,"Storage for each RDS instance (General Purpose SSD (gp3)), Storage amount (200 GB), Quantity (2), Instance type (db.t4g.xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Multi-AZ), Pricing strategy (Reserved 1yr All Upfront), Additional backup storage (200 GB)"
+Initial estimate > DB,US East (N. Virginia),Master,Amazon RDS for MySQL,6066,257.6,9157.2,USD,,"Storage for each RDS instance (Provisioned IOPS SSD (io1)), Storage amount (100 GB), Provisioning IOPS (300), Quantity (2), Instance type (db.t4g.xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Multi-AZ), Pricing strategy (Reserved 1yr All Upfront)"
 ,,,,,,,,,
 ,,,,,,,,,
 ,,,,,,,,,
@@ -23,4 +23,4 @@ Acknowledgement,,,,,,,,,
 "* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,,
 ,,,,,,,,,
 Changes,,,,,,,,,
-"I increased the number of DB instances and moved it to be a Multi-AZ cluster, added backup storage to it. Upscaled the size of the web and app server instances. Updated traffic expectations according to the increased performance. ",,,,,,,,,
+I increased the number of DB instances and moved it to be a Multi-AZ cluster. Used provisioned IOPS for the DB. Upscaled the size of the web and app server instances. Updated traffic expectations according to the increased performance. ,,,,,,,,,
